@@ -16,8 +16,8 @@ public class DiscoveryServerApplication {
 	}
 
 	@Bean
-	RestTemplate getRestTemplete(){
-		return getRestTemplete();
+	RestTemplate getRestTemplate(){
+		return getRestTemplate();
 	}
 
 }
