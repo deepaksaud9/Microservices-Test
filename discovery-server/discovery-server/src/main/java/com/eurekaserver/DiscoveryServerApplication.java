@@ -15,9 +15,6 @@ public class DiscoveryServerApplication {
 		SpringApplication.run(DiscoveryServerApplication.class, args);
 	}
 
-	@Bean
-	RestTemplate getRestTemplate(){
-		return getRestTemplate();
-	}
+
 
 }
