@@ -22,7 +22,7 @@ public class MovieInfo {
     }
 
     public CatalogItems getFallbackCatalogItem(Rating rating) {
-        return new CatalogItems("no movies found", "", "",rating.getRating());
+        return new CatalogItems("no movies found", "", "",0);
     }
 
 }

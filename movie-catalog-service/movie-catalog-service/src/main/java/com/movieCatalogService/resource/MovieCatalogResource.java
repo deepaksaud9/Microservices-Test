@@ -8,6 +8,7 @@ import com.movieCatalogService.services.MovieInfo;
 import com.movieCatalogService.services.UserRatingInfo;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,22 +18,23 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-
 @RestController
 @RequestMapping("/catalog")
 public class MovieCatalogResource {
 
     @Autowired
     private RestTemplate restTemplate;
-
+    @Autowired
+    private UserRatingInfo userRatingInfo;
     @Autowired
     private MovieInfo movieInfo;
 
-    @Autowired
-    private UserRatingInfo userRatingInfo;
+
 
 //    @Autowired
 //    private WebClient.Builder webClientBuilder;
+
+
 
     @RequestMapping("/{userId}")
     public List<CatalogItems> getCatalog(@PathVariable("userId") String userId){
